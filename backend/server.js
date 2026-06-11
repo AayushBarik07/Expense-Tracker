@@ -10,7 +10,7 @@ const incomeRoutes = require("./routes/incomeRoutes");
 const expenseRoutes = require("./routes/expenseRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
-const clientUrl = process.env.CLIENT_URL || "https://expense-tracker-sigma-two-95.vercel.app";
+const clientUrl = process.env.CLIENT_URL || "https://vercel.com/aayush-bariks-projects/expense-tracker";
 const allowedOrigin = (() => {
   try {
     return new URL(clientUrl).origin;
