@@ -10,29 +10,56 @@ const incomeRoutes = require("./routes/incomeRoutes");
 const expenseRoutes = require("./routes/expenseRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
-// ✅ Support multiple origins via env var or fallback to defaults
-const allowedOrigins = process.env.ALLOWED_ORIGINS
-  ? process.env.ALLOWED_ORIGINS.split(",").map((o) => o.trim())
-  : [
-      "https://expense-tracker-sigma-two-95.vercel.app",
-      "http://localhost:5173",
-    ];
+const clientUrl = process.env.CLIENT_URL || "https://expense-tracker-sigma-two-95.vercel.app";
+const allowedOrigin = (() => {
+  try {
+    return new URL(clientUrl).origin;
+  } catch (error) {
+    return clientUrl.replace(/\/+$/, "");
+  }
+})();
 
 // Middleware to handle CORS
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (Postman, mobile apps, curl)
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error(`CORS blocked for origin: ${origin}`));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
+     origin: allowedOrigin,
+     methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true // Allow cookies to be sent in cross-origin requests
   })
 );
 
-// ... rest of your file stays exactly the same
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Debug middleware to log requests
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  console.log('Headers:', req.headers);
+  console.log('Body:', req.body);
+  next();
+});
+
+connectDB();
+
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/income", incomeRoutes);
+app.use("/api/v1/expense", expenseRoutes);
+app.use("/api/v1/dashboard", dashboardRoutes);
+
+//serve uploads uploads folders
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+// Centralized error handler to keep API responses JSON-only.
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.statusCode || 500).json({
+    message: err.message || "Internal server error",
+  });
+});
+ 
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
