@@ -54,30 +54,26 @@ const ForgotPassword = () => {
     <AuthLayout>
       <div className="relative w-full max-w-md mx-auto">
         {/* Glow */}
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-[#5FD370]/20 blur-3xl rounded-full"></div>
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-accent-green/20 blur-3xl rounded-full"></div>
 
         {/* Card */}
         <div
           className={`relative overflow-hidden rounded-[32px] border backdrop-blur-2xl shadow-2xl p-8 md:p-10 transition-all duration-300 ${
-            isDark
-              ? "bg-[#020402]/90 border-[#1f3a1f]"
-              : "bg-white/90 border-[#d7e6d7]"
+            "bg-primary-card/90 border-borders"
           }`}
         >
           {/* Background Gradient */}
-          <div className="absolute inset-0 bg-linear-to-br from-[#5FD370]/5 via-transparent to-[#113E02]/10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-accent-electric/5 via-transparent to-accent-violet/5 pointer-events-none"></div>
 
           {/* Header */}
           <div className="relative text-center mb-10">
             <div
               className={`mx-auto mb-6 flex items-center justify-center w-18 h-18 rounded-3xl border shadow-lg backdrop-blur-xl ${
-                isDark
-                  ? "bg-[#113E02]/60 border-[#2e5a2e]"
-                  : "bg-[#F4F7F2] border-[#dbe8db]"
+                "bg-secondary-bg border-borders"
               }`}
             >
               <svg
-                className="w-8 h-8 text-[#5FD370]"
+                className="w-8 h-8 text-accent-electric"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -92,10 +88,8 @@ const ForgotPassword = () => {
             </div>
 
             <h2
-              className={`text-4xl font-bold tracking-tight mb-3 bg-linear-to-r bg-clip-text text-transparent ${
-                isDark
-                  ? "from-[#C6DEC6] via-[#5FD370] to-[#C6DEC6]"
-                  : "from-[#113E02] via-[#2f7a2f] to-[#113E02]"
+              className={`text-4xl font-bold tracking-tight mb-3 bg-gradient-to-r bg-clip-text text-transparent ${
+                "from-accent-cyan via-accent-electric to-accent-violet"
               }`}
             >
               Reset Password
@@ -103,7 +97,7 @@ const ForgotPassword = () => {
 
             <p
               className={`text-sm font-medium ${
-                isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                "text-secondary-text"
               }`}
             >
               {isSubmitted
@@ -114,11 +108,11 @@ const ForgotPassword = () => {
 
           {/* Success Message */}
           {isSubmitted && (
-            <div className="mb-8 rounded-3xl border border-[#5FD370]/20 bg-[#5FD370]/10 p-5">
+            <div className="mb-8 rounded-3xl border border-accent-electric/20 bg-accent-green/10 p-5">
               <div className="flex gap-3">
                 <div className="mt-1">
                   <svg
-                    className="w-5 h-5 text-[#5FD370]"
+                    className="w-5 h-5 text-accent-electric"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -135,7 +129,7 @@ const ForgotPassword = () => {
                 <div>
                   <p
                     className={`font-semibold mb-1 ${
-                      isDark ? "text-[#C6DEC6]" : "text-[#113E02]"
+                      isDark ? "text-dark-text-secondary" : "text-light-text-primary"
                     }`}
                   >
                     Email sent successfully
@@ -143,7 +137,7 @@ const ForgotPassword = () => {
 
                   <p
                     className={`text-sm leading-relaxed ${
-                      isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                      "text-secondary-text"
                     }`}
                   >
                     We’ve sent a password reset link to{" "}
@@ -162,7 +156,7 @@ const ForgotPassword = () => {
               <div className="group">
                 <label
                   className={`mb-2 block text-sm font-semibold ${
-                    isDark ? "text-[#C6DEC6]" : "text-[#113E02]"
+                    isDark ? "text-dark-text-secondary" : "text-light-text-primary"
                   }`}
                 >
                   Email Address
@@ -172,9 +166,7 @@ const ForgotPassword = () => {
                   <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                     <svg
                       className={`w-5 h-5 transition-colors ${
-                        isDark
-                          ? "text-[#6e836e] group-focus-within:text-[#5FD370]"
-                          : "text-[#6e836e] group-focus-within:text-[#113E02]"
+                        "text-muted-text group-focus-within:text-accent-electric"
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -199,11 +191,9 @@ const ForgotPassword = () => {
                     className={`w-full rounded-2xl border pl-12 pr-4 py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
                       error
                         ? "border-red-500/50 focus:ring-red-500/10"
-                        : "focus:ring-[#5FD370]/10"
+                        : "focus:ring-accent-electric/50/10"
                     } ${
-                      isDark
-                        ? "bg-[#0b120b] border-[#1d351d] text-white placeholder:text-[#607060] focus:border-[#5FD370]"
-                        : "bg-[#f8fbf8] border-[#dce7dc] text-[#113E02] placeholder:text-[#7b8d7b] focus:border-[#5FD370]"
+                      isDark ? "bg-[#0b120b] border-[#1d351d] text-dark-text-primary placeholder:text-[#607060] focus:border-accent-electric" : "bg-[#f8fbf8] border-[#dce7dc] text-light-text-primary placeholder:text-[#7b8d7b] focus:border-accent-electric"
                     }`}
                   />
                 </div>
@@ -232,14 +222,12 @@ const ForgotPassword = () => {
               {/* Info Box */}
               <div
                 className={`rounded-2xl border p-4 ${
-                  isDark
-                    ? "bg-[#0b120b] border-[#1d351d]"
-                    : "bg-[#F4F7F2] border-[#dce7dc]"
+                  isDark ? "bg-[#0b120b] border-[#1d351d]" : "bg-[#F4F7F2] border-[#dce7dc]"
                 }`}
               >
                 <p
                   className={`text-sm leading-relaxed ${
-                    isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                    "text-secondary-text"
                   }`}
                 >
                   We’ll send a secure password reset link to your email
@@ -252,9 +240,9 @@ const ForgotPassword = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="group relative overflow-hidden w-full rounded-2xl bg-linear-to-r from-[#113E02] via-[#1d5b1d] to-[#5FD370] py-4 font-semibold text-white shadow-lg shadow-[#5FD370]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-[#5FD370]/40 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="group relative overflow-hidden w-full rounded-2xl btn-primary bg-primary-gradient border-0 py-4 font-semibold text-white shadow-lg  transition-all duration-300 hover:-translate-y-1  disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-primary-card/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 <span className="relative flex items-center justify-center gap-2">
                   {isLoading ? (
@@ -310,9 +298,7 @@ const ForgotPassword = () => {
               <button
                 onClick={handleReset}
                 className={`w-full rounded-2xl border py-4 font-semibold transition-all duration-300 hover:-translate-y-1 ${
-                  isDark
-                    ? "bg-[#0b120b] border-[#1d351d] text-[#C6DEC6] hover:border-[#5FD370]"
-                    : "bg-[#f8fbf8] border-[#dce7dc] text-[#113E02] hover:border-[#5FD370]"
+                  isDark ? "bg-[#0b120b] border-[#1d351d] text-dark-text-secondary hover:border-accent-cyan" : "bg-[#f8fbf8] border-[#dce7dc] text-light-text-primary hover:border-accent-cyan-light"
                 }`}
               >
                 Try Another Email
@@ -320,7 +306,7 @@ const ForgotPassword = () => {
 
               <Link
                 to="/login"
-                className="block w-full rounded-2xl bg-linear-to-r from-[#113E02] via-[#1d5b1d] to-[#5FD370] py-4 text-center font-semibold text-white shadow-lg shadow-[#5FD370]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-[#5FD370]/40"
+                className="block w-full rounded-2xl btn-primary bg-primary-gradient border-0 py-4 text-center font-semibold text-white shadow-lg  transition-all duration-300 hover:-translate-y-1 "
               >
                 Back to Login
               </Link>
@@ -335,13 +321,13 @@ const ForgotPassword = () => {
           >
             <p
               className={`text-center text-sm ${
-                isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                "text-secondary-text"
               }`}
             >
               Don’t have an account?{" "}
               <Link
                 to="/signup"
-                className="font-semibold text-[#5FD370] hover:text-[#7ee08a] transition-colors"
+                className="font-semibold text-accent-electric hover:text-accent-violet transition-colors"
               >
                 Sign up here
               </Link>
@@ -349,13 +335,13 @@ const ForgotPassword = () => {
 
             <p
               className={`text-center text-sm mt-3 ${
-                isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                "text-secondary-text"
               }`}
             >
               Remember your password?{" "}
               <Link
                 to="/login"
-                className="font-semibold text-[#5FD370] hover:text-[#7ee08a] transition-colors"
+                className="font-semibold text-accent-electric hover:text-accent-violet transition-colors"
               >
                 Back to Login
               </Link>

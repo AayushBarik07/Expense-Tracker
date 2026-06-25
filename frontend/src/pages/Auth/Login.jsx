@@ -62,30 +62,26 @@ const Login = () => {
     <AuthLayout>
       <div className="relative w-full max-w-md mx-auto">
         {/* Background Glow */}
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-[#5FD370]/20 blur-3xl rounded-full"></div>
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-accent-green/20 blur-3xl rounded-full"></div>
 
         {/* Main Card */}
         <div
           className={`relative overflow-hidden rounded-[32px] border backdrop-blur-2xl shadow-2xl p-8 md:p-10 transition-all duration-300 ${
-            isDark
-              ? "bg-[#020402]/90 border-[#1f3a1f]"
-              : "bg-white/90 border-[#d7e6d7]"
+            "bg-primary-card/90 border-borders"
           }`}
         >
           {/* Decorative Gradient */}
-          <div className="absolute inset-0 bg-linear-to-br from-[#5FD370]/5 via-transparent to-[#113E02]/10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-accent-electric/5 via-transparent to-accent-violet/5 pointer-events-none"></div>
 
           {/* Header */}
           <div className="relative text-center mb-10">
             <div
               className={`mx-auto mb-6 flex items-center justify-center w-18 h-18 rounded-3xl border shadow-lg backdrop-blur-xl ${
-                isDark
-                  ? "bg-[#113E02]/60 border-[#2e5a2e]"
-                  : "bg-[#F4F7F2] border-[#dbe8db]"
+                "bg-secondary-bg border-borders"
               }`}
             >
               <svg
-                className="w-8 h-8 text-[#5FD370]"
+                className="w-8 h-8 text-accent-electric"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -100,10 +96,8 @@ const Login = () => {
             </div>
 
             <h2
-              className={`text-4xl font-bold tracking-tight mb-3 bg-linear-to-r bg-clip-text text-transparent ${
-                isDark
-                  ? "from-[#C6DEC6] via-[#5FD370] to-[#C6DEC6]"
-                  : "from-[#113E02] via-[#2f7a2f] to-[#113E02]"
+              className={`text-4xl font-bold tracking-tight mb-3 bg-gradient-to-r bg-clip-text text-transparent ${
+                "from-accent-cyan via-accent-electric to-accent-violet"
               }`}
             >
               Welcome Back
@@ -111,7 +105,7 @@ const Login = () => {
 
             <p
               className={`text-sm font-medium ${
-                isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                "text-secondary-text"
               }`}
             >
               Sign in to continue managing your finances
@@ -131,7 +125,7 @@ const Login = () => {
             <div className="group">
               <label
                 className={`mb-2 block text-sm font-semibold ${
-                  isDark ? "text-[#C6DEC6]" : "text-[#113E02]"
+                  isDark ? "text-dark-text-secondary" : "text-light-text-primary"
                 }`}
               >
                 Email Address
@@ -141,9 +135,7 @@ const Login = () => {
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                   <svg
                     className={`w-5 h-5 transition-colors ${
-                      isDark
-                        ? "text-[#6e836e] group-focus-within:text-[#5FD370]"
-                        : "text-[#6e836e] group-focus-within:text-[#113E02]"
+                      "text-muted-text group-focus-within:text-accent-electric"
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -166,9 +158,7 @@ const Login = () => {
                   placeholder="you@example.com"
                   required
                   className={`w-full rounded-2xl border pl-12 pr-4 py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
-                    isDark
-                      ? "bg-[#0b120b] border-[#1d351d] text-white placeholder:text-[#607060] focus:border-[#5FD370] focus:ring-[#5FD370]/10"
-                      : "bg-[#f8fbf8] border-[#dce7dc] text-[#113E02] placeholder:text-[#7b8d7b] focus:border-[#5FD370] focus:ring-[#5FD370]/10"
+                    "ui-input"
                   }`}
                 />
               </div>
@@ -179,7 +169,7 @@ const Login = () => {
               <div className="flex items-center justify-between mb-2">
                 <label
                   className={`block text-sm font-semibold ${
-                    isDark ? "text-[#C6DEC6]" : "text-[#113E02]"
+                    isDark ? "text-dark-text-secondary" : "text-light-text-primary"
                   }`}
                 >
                   Password
@@ -187,7 +177,7 @@ const Login = () => {
 
                 <Link
                   to="/forgot-password"
-                  className="text-sm font-medium text-[#5FD370] hover:text-[#7ee08a] transition-colors"
+                  className="text-sm font-medium text-accent-electric hover:text-accent-violet transition-colors"
                 >
                   Forgot?
                 </Link>
@@ -197,9 +187,7 @@ const Login = () => {
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                   <svg
                     className={`w-5 h-5 transition-colors ${
-                      isDark
-                        ? "text-[#6e836e] group-focus-within:text-[#5FD370]"
-                        : "text-[#6e836e] group-focus-within:text-[#113E02]"
+                      "text-muted-text group-focus-within:text-accent-electric"
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -222,9 +210,7 @@ const Login = () => {
                   placeholder="Enter your password"
                   required
                   className={`w-full rounded-2xl border pl-12 pr-14 py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
-                    isDark
-                      ? "bg-[#0b120b] border-[#1d351d] text-white placeholder:text-[#607060] focus:border-[#5FD370] focus:ring-[#5FD370]/10"
-                      : "bg-[#f8fbf8] border-[#dce7dc] text-[#113E02] placeholder:text-[#7b8d7b] focus:border-[#5FD370] focus:ring-[#5FD370]/10"
+                    "ui-input"
                   }`}
                 />
 
@@ -232,9 +218,7 @@ const Login = () => {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className={`absolute right-4 top-1/2 -translate-y-1/2 transition-colors ${
-                    isDark
-                      ? "text-[#6e836e] hover:text-[#C6DEC6]"
-                      : "text-[#6e836e] hover:text-[#113E02]"
+                    "text-muted-text hover:text-primary-text"
                   }`}
                 >
                   {showPassword ? (
@@ -286,12 +270,12 @@ const Login = () => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="w-5 h-5 rounded border-[#5FD370] bg-transparent text-[#5FD370] focus:ring-[#5FD370]"
+                  className="w-5 h-5 rounded border-accent-electric bg-transparent text-accent-electric focus:ring-accent-electric/50"
                 />
 
                 <span
                   className={`text-sm font-medium ${
-                    isDark ? "text-[#9eb39e]" : "text-[#4f5f4f]"
+                    "text-secondary-text"
                   }`}
                 >
                   Keep me signed in
@@ -303,9 +287,9 @@ const Login = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative overflow-hidden w-full rounded-2xl bg-linear-to-r from-[#113E02] via-[#1d5b1d] to-[#5FD370] py-4 font-semibold text-white shadow-lg shadow-[#5FD370]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-[#5FD370]/40 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="group relative overflow-hidden w-full rounded-2xl btn-primary bg-primary-gradient border-0 py-4 font-semibold text-white shadow-lg  transition-all duration-300 hover:-translate-y-1  disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-primary-card/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
               <span className="relative flex items-center justify-center gap-2">
                 {isLoading ? (
@@ -359,26 +343,24 @@ const Login = () => {
 
           {/* Divider */}
           <div className="flex items-center gap-4 my-8">
-            <div className="flex-1 h-px bg-linear-to-r from-transparent via-[#5FD370]/20 to-transparent"></div>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-borders to-transparent"></div>
 
             <span
               className={`text-xs uppercase tracking-[0.2em] ${
-                isDark ? "text-[#6e836e]" : "text-[#7b8d7b]"
+                "text-muted-text"
               }`}
             >
               Or Continue With
             </span>
 
-            <div className="flex-1 h-px bg-linear-to-r from-transparent via-[#5FD370]/20 to-transparent"></div>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-borders to-transparent"></div>
           </div>
 
           {/* Social Buttons */}
           <div className="grid grid-cols-2 gap-4">
             <button
               className={`rounded-2xl border py-4 px-4 transition-all duration-300 hover:-translate-y-1 ${
-                isDark
-                  ? "bg-[#0b120b] border-[#1d351d] text-white hover:border-[#5FD370]"
-                  : "bg-[#f8fbf8] border-[#dce7dc] text-[#5d6d5d] hover:border-[#5FD370]"
+                "bg-secondary-bg border-borders text-primary-text hover:border-accent-cyan"
               }`}
             >
               <div className="flex items-center justify-center gap-3">
@@ -388,9 +370,7 @@ const Login = () => {
 
             <button
               className={`rounded-2xl border py-4 px-4 transition-all duration-300 hover:-translate-y-1 ${
-                isDark
-                  ? "bg-[#0b120b] border-[#1d351d] text-white hover:border-[#5FD370]"
-                  : "bg-[#f8fbf8] border-[#dce7dc] text-[#5d6d5d] hover:border-[#5FD370]"
+                "bg-secondary-bg border-borders text-primary-text hover:border-accent-cyan"
               }`}
             >
               <div className="flex items-center justify-center gap-3">
@@ -403,13 +383,13 @@ const Login = () => {
           <div className="mt-10 text-center">
             <p
               className={`text-sm ${
-                isDark ? "text-[#9eb39e]" : "text-[#5d6d5d]"
+                "text-secondary-text"
               }`}
             >
               Don't have an account?{" "}
               <Link
                 to="/signup"
-                className="font-semibold text-[#5FD370] hover:text-[#7ee08a] transition-colors"
+                className="font-semibold text-accent-electric hover:text-accent-violet transition-colors"
               >
                 Create Account
               </Link>
@@ -417,15 +397,15 @@ const Login = () => {
 
             <p
               className={`mt-4 text-xs ${
-                isDark ? "text-[#607060]" : "text-[#8a9a8a]"
+                "text-muted-text"
               }`}
             >
               By signing in, you agree to our{" "}
-              <a href="#" className="text-[#5FD370] hover:underline">
+              <a href="#" className="text-accent-electric hover:underline">
                 Terms
               </a>{" "}
               and{" "}
-              <a href="#" className="text-[#5FD370] hover:underline">
+              <a href="#" className="text-accent-electric hover:underline">
                 Privacy Policy
               </a>
             </p>

@@ -19,9 +19,9 @@ const AuthLayout = ({ children }) => {
           
           {/* Main card */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-40 h-44 bg-linear-to-br from-purple-500 to-blue-600 rounded-3xl shadow-2xl p-4">
+            <div className="relative w-40 h-44 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl shadow-2xl p-4">
               {/* Avatar circle */}
-              <div className="w-20 h-20 mx-auto mt-4 bg-linear-to-br from-blue-400 to-blue-200 rounded-2xl flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mt-4 bg-gradient-to-br from-blue-400 to-blue-200 rounded-2xl flex items-center justify-center">
                 <div className="text-4xl">👤</div>
               </div>
               {/* Info lines */}
@@ -54,29 +54,29 @@ const AuthLayout = ({ children }) => {
           {/* Main illustration */}
           <div className="absolute inset-0 flex items-center justify-center gap-3">
             {/* Mobile device */}
-            <div className="w-20 h-32 bg-linear-to-br from-blue-600 to-blue-500 rounded-2xl shadow-xl p-2 relative z-10">
+            <div className="w-20 h-32 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl shadow-xl p-2 relative z-10">
               {/* Header dots */}
               <div className="flex gap-1 mb-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-white/60"></div>
-                <div className="w-1.5 h-1.5 rounded-full bg-white/60"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-card/60"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-card/60"></div>
               </div>
               {/* Pie chart */}
-              <div className="w-12 h-12 mx-auto mb-2 bg-linear-to-br from-pink-400 to-blue-400 rounded-full relative">
-                <div className="absolute inset-0 bg-linear-to-r from-transparent via-transparent to-pink-500 rounded-full" style={{ clipPath: 'polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%)' }}></div>
+              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-pink-400 to-blue-400 rounded-full relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-pink-500 rounded-full" style={{ clipPath: 'polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%)' }}></div>
               </div>
               {/* Lines */}
               <div className="space-y-1">
-                <div className="h-1 bg-white/40 rounded w-10 mx-auto"></div>
-                <div className="h-1 bg-white/40 rounded w-8 mx-auto"></div>
+                <div className="h-1 bg-primary-card/40 rounded w-10 mx-auto"></div>
+                <div className="h-1 bg-primary-card/40 rounded w-8 mx-auto"></div>
               </div>
               {/* Small chart icon */}
-              <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-linear-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center shadow-lg">
+              <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center shadow-lg">
                 <div className="text-xs">📊</div>
               </div>
             </div>
             
             {/* Desktop chart */}
-            <div className="w-28 h-32 bg-white rounded-2xl shadow-xl p-3 relative">
+            <div className="w-28 h-32 bg-primary-card rounded-2xl shadow-xl p-3 relative">
               {/* Header */}
               <div className="flex gap-1 mb-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
@@ -84,15 +84,15 @@ const AuthLayout = ({ children }) => {
               </div>
               {/* Bar chart */}
               <div className="flex items-end justify-around h-16 gap-1">
-                <div className="w-2 h-8 bg-linear-to-t from-blue-500 to-blue-400 rounded-t"></div>
-                <div className="w-2 h-12 bg-linear-to-t from-blue-500 to-blue-400 rounded-t"></div>
-                <div className="w-2 h-6 bg-linear-to-t from-blue-500 to-blue-400 rounded-t"></div>
-                <div className="w-2 h-10 bg-linear-to-t from-blue-500 to-blue-400 rounded-t"></div>
+                <div className="w-2 h-8 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t"></div>
+                <div className="w-2 h-12 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t"></div>
+                <div className="w-2 h-6 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t"></div>
+                <div className="w-2 h-10 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t"></div>
               </div>
               {/* Line graph */}
               <svg className="absolute bottom-3 right-3 w-16 h-8" viewBox="0 0 60 30">
                 <path d="M 5 25 L 15 20 L 25 15 L 35 18 L 45 10 L 55 5" 
-                      stroke="#5FD370" 
+                      stroke="var(--accent-electric)" 
                       strokeWidth="2" 
                       fill="none" 
                       strokeLinecap="round"/>
@@ -117,7 +117,7 @@ const AuthLayout = ({ children }) => {
           {/* Main cart */}
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Soft glow background */}
-            <div className="absolute w-40 h-40 bg-linear-to-br from-pink-300/40 to-purple-300/40 rounded-full blur-2xl"></div>
+            <div className="absolute w-40 h-40 bg-gradient-to-br from-pink-300/40 to-purple-300/40 rounded-full blur-2xl"></div>
             
             {/* Shopping cart */}
             <div className="relative z-10">
@@ -139,7 +139,7 @@ const AuthLayout = ({ children }) => {
                 
                 <defs>
                   <linearGradient id="cartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#5FD370" />
+                    <stop offset="0%" stopColor="var(--accent-electric)" />
                     <stop offset="100%" stopColor="#2f8f3f" />
                   </linearGradient>
                   <linearGradient id="cartStroke" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -147,11 +147,11 @@ const AuthLayout = ({ children }) => {
                     <stop offset="100%" stopColor="#0b3f12" />
                   </linearGradient>
                   <linearGradient id="handleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#5FD370" />
+                    <stop offset="0%" stopColor="var(--accent-electric)" />
                     <stop offset="100%" stopColor="#2f8f3f" />
                   </linearGradient>
                   <linearGradient id="wheelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#5FD370" />
+                    <stop offset="0%" stopColor="var(--accent-electric)" />
                     <stop offset="100%" stopColor="#3fae52" />
                   </linearGradient>
                 </defs>
@@ -183,16 +183,16 @@ const AuthLayout = ({ children }) => {
   };
 
   return (
-    <div className="w-screen h-screen flex transition-colors duration-300 bg-linear-to-br from-[#f7faf5] to-[#f1f6ef]">
+    <div className="w-screen h-screen flex transition-colors duration-300 bg-app-bg">
       
       {/* LEFT SIDE DESIGN */}
-      <div className="hidden md:flex w-[40vw] h-full flex-col items-center justify-center relative overflow-hidden transition-colors duration-300 bg-linear-to-br from-[#113E02] via-[#0a2805] to-[#113E02]">
+      <div className="hidden md:flex w-[40vw] h-full flex-col items-center justify-center relative overflow-hidden transition-colors duration-300 bg-gradient-to-br from-[#05060D] via-[#101325] to-[#05060D]">
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full blur-3xl animate-pulse bg-[#5FD3701f]"></div>
-          <div className="absolute bottom-1/4 -right-20 w-80 h-80 rounded-full blur-3xl animate-pulse bg-[#5FD3702d]" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-2xl bg-white/5"></div>
+          <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full blur-3xl animate-pulse bg-accent-electric/10"></div>
+          <div className="absolute bottom-1/4 -right-20 w-80 h-80 rounded-full blur-3xl animate-pulse bg-accent-violet/10" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-2xl bg-primary-card/5"></div>
         </div>
 
         {/* Decorative Grid Pattern */}
@@ -212,7 +212,7 @@ const AuthLayout = ({ children }) => {
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-20 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/30 transition-all shadow-lg border border-white/30 group"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-20 w-10 h-10 bg-primary-card/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-primary-card/30 transition-all shadow-lg border border-white/30 group"
               >
                 <svg className="w-5 h-5 text-white group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
@@ -221,7 +221,7 @@ const AuthLayout = ({ children }) => {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-20 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/30 transition-all shadow-lg border border-white/30 group"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-20 w-10 h-10 bg-primary-card/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-primary-card/30 transition-all shadow-lg border border-white/30 group"
               >
                 <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
@@ -241,7 +241,7 @@ const AuthLayout = ({ children }) => {
                         : 'opacity-0 translate-x-full absolute inset-0'
                     }`}
                   >
-                    <div className="bg-white/95 backdrop-blur-xl rounded-[28px] shadow-2xl p-8 border border-white/60 hover:shadow-3xl transition-all duration-500">
+                    <div className="bg-primary-card/95 backdrop-blur-xl rounded-[28px] shadow-2xl p-8 border border-white/60 hover:shadow-3xl transition-all duration-500">
 
                       {/* Illustration */}
                       <div className="mb-8">
@@ -250,10 +250,10 @@ const AuthLayout = ({ children }) => {
 
                       {/* Content */}
                       <div className="text-center">
-                        <h3 className="text-xl font-bold mb-3 text-[#113E02]">
+                        <h3 className="text-xl font-bold mb-3 text-white">
                           {item.title}
                         </h3>
-                        <p className="text-sm leading-relaxed text-[#5f785a]">
+                        <p className="text-sm leading-relaxed text-[#AEB7D6]">
                           {item.description}
                         </p>
                       </div>
@@ -265,7 +265,7 @@ const AuthLayout = ({ children }) => {
           </div>
 
           {/* Caption Text */}
-          <p className="text-base text-center max-w-md mb-10 leading-relaxed font-light px-4 text-[#e5f3e2]">
+          <p className="text-base text-center max-w-md mb-10 leading-relaxed font-light px-4 text-[#AEB7D6]">
             Experience seamless expense tracking with powerful features designed for your financial success.
           </p>
 
@@ -277,8 +277,8 @@ const AuthLayout = ({ children }) => {
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentSlide
-                    ? 'w-8 h-2 bg-white shadow-lg shadow-white/30'
-                    : 'w-2 h-2 bg-white/50 hover:bg-white/80 hover:scale-125'
+                    ? 'w-8 h-2 bg-primary-card shadow-lg shadow-white/30'
+                    : 'w-2 h-2 bg-primary-card/50 hover:bg-primary-card/80 hover:scale-125'
                 }`}
               ></button>
             ))}
@@ -288,19 +288,19 @@ const AuthLayout = ({ children }) => {
       </div>
 
       {/* RIGHT SIDE (AUTH CONTENT) */}
-      <div className="w-full md:w-[60vw] px-8 sm:px-12 py-10 sm:py-12 overflow-y-auto flex flex-col relative transition-colors duration-300 bg-linear-to-b from-[#ffffff] to-[#f5faf3]">
+      <div className="w-full md:w-[60vw] px-8 sm:px-12 py-10 sm:py-12 overflow-y-auto flex flex-col relative transition-colors duration-300 bg-app-bg">
         
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #5FD370 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, var(--accent-electric) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }}></div>
 
         {/* Top Header */}
         <div className="relative z-10 flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
-            <div className="w-1 h-8 bg-linear-to-b from-[#5FD370] to-[#2f8f3f] rounded-full"></div>
-            <h1 className="text-2xl font-bold bg-linear-to-r from-[#5FD370] to-[#C6DEC6] bg-clip-text text-transparent">
+            <div className="w-1 h-8 bg-gradient-to-b from-accent-electric to-accent-violet rounded-full"></div>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-accent-electric to-accent-cyan bg-clip-text text-transparent">
               Expense Tracker
             </h1>
           </div>
@@ -308,7 +308,7 @@ const AuthLayout = ({ children }) => {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="group relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 bg-[#f2f8ef] hover:bg-[#e8f3e5] border-2 border-[#dce8d8]"
+            className="group relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 bg-secondary-bg hover:bg-card-hover border-2 border-borders"
             aria-label="Toggle theme"
           >
             <div className="relative w-6 h-6">
@@ -339,7 +339,7 @@ const AuthLayout = ({ children }) => {
             </div>
             
             {/* Tooltip */}
-            <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-[#113E02] text-[#e8f6e5]">
+            <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-primary-card text-primary-text border border-borders">
               {isDark ? 'Light mode' : 'Dark mode'}
             </span>
           </button>
@@ -351,14 +351,14 @@ const AuthLayout = ({ children }) => {
 
         {/* Footer */}
         <div className="relative z-10 mt-auto pt-8 text-center">
-          <div className="flex items-center justify-center gap-6 text-xs mb-3 text-[#6d8667]">
-            <a href="#" className="font-medium transition-colors hover:text-[#113E02]">Privacy</a>
-            <span className="w-1 h-1 rounded-full bg-[#c7d8c2]"></span>
-            <a href="#" className="font-medium transition-colors hover:text-[#113E02]">Terms</a>
-            <span className="w-1 h-1 rounded-full bg-[#c7d8c2]"></span>
-            <a href="#" className="font-medium transition-colors hover:text-[#113E02]">Help</a>
+          <div className="flex items-center justify-center gap-6 text-xs mb-3 text-muted-text">
+            <a href="#" className="font-medium transition-colors hover:text-primary-text">Privacy</a>
+            <span className="w-1 h-1 rounded-full bg-borders"></span>
+            <a href="#" className="font-medium transition-colors hover:text-primary-text">Terms</a>
+            <span className="w-1 h-1 rounded-full bg-borders"></span>
+            <a href="#" className="font-medium transition-colors hover:text-primary-text">Help</a>
           </div>
-          <p className="text-xs flex items-center justify-center gap-1.5 text-[#6d8667]">
+          <p className="text-xs flex items-center justify-center gap-1.5 text-muted-text">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>

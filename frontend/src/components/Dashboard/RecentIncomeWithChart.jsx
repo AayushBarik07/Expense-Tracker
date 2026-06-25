@@ -1,7 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import CustomPieChart from '../Charts/CustomPieChart.jsx';
 
-const COLORS = ["#5FD370", "#3fae52", "#C6DEC6", "#73e784", "#2f8f3f", "#8af69a", "#4ca95b", "#9bbf9b", "#6ed77d", "#2d7e39", "#b6d1b6", "#7fd88c"];
+const COLORS = [
+  "var(--accent-electric)",
+  "var(--accent-cyan)",
+  "var(--accent-violet)",
+  "var(--accent-mint)",
+  "#405CFF",
+  "#0EA5E9",
+  "#6D5BFF",
+  "#14B8A6",
+  "#6177FF",
+  "#9DEEFF",
+  "#7B61FF",
+  "#B9FFF2"
+];
 const RecentIncomeWithChart = ({ data, totalIncome }) => {
 
   const [chartData, setChartData] = useState([]);
@@ -24,7 +37,7 @@ const RecentIncomeWithChart = ({ data, totalIncome }) => {
   return (
     <div className="card">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-[#113E02]">Last 60 Days Income</h2>
+        <h2 className="text-lg font-semibold text-primary-text">Last 60 Days Income</h2>
       </div>
 
       <CustomPieChart 

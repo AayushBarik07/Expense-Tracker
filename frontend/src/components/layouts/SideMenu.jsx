@@ -49,36 +49,36 @@ const SideMenu = ({ activeMenu }) => {
   };
 
   return (
-    <div className="h-[calc(100vh-90px)] border border-[#d8e5d3] bg-[#fbfdf9] sticky top-[90px] p-5 rounded-2xl overflow-y-auto shadow-[0_16px_35px_-30px_rgba(17,62,2,0.2)]">
+    <div className="h-[calc(100vh-90px)] border border-borders bg-secondary-bg sticky top-[90px] p-5 rounded-2xl overflow-y-auto shadow-lg">
       <div className="flex flex-col items-center justify-center gap-3 mt-3 mb-7 text-center">
         {profileImage && !imgError ? (
           <img
             src={profileImage}
             alt="Profile Image"
-            className="w-16 h-16 bg-[#5FD37022] rounded-full object-cover border border-[#5FD37055]"
+            className="w-16 h-16 bg-[rgba(97,119,255,0.12)] rounded-full object-cover border border-[rgba(97,119,255,0.3)]"
             onError={() => setImgError(true)}
             loading="lazy"
           />
         ) : (
-          <div className="w-16 h-16 bg-linear-to-br from-[#5FD370] to-[#49b859] rounded-full flex items-center justify-center shadow-[0_14px_24px_-18px_rgba(95,211,112,0.75)]">
+          <div className="w-16 h-16 bg-primary-gradient rounded-full flex items-center justify-center shadow-[0_10px_20px_-10px_var(--accent-electric)]">
             <div className="flex items-center justify-center">
               {user?.fullName ? (
-                <span className="text-[#06200d] font-bold text-lg">{getInitials()}</span>
+                <span className="text-white font-bold text-lg">{getInitials()}</span>
               ) : (
-                <LuUser className="text-[#06200d] text-2xl" />
+                <LuUser className="text-white text-2xl" />
               )}
             </div>
           </div>
         )}
-        <h5 className="font-semibold text-[#113E02] leading-6">{user?.fullName || ""}</h5>
+        <h5 className="font-semibold text-primary-text leading-6">{user?.fullName || ""}</h5>
       </div>
 
-      <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-[#6b8364] mb-2 px-1">Main</p>
+      <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-muted-text mb-2 px-1">Main</p>
 
       {SIDE_MENU_DATA.map((item) => (
         <button 
           key={`menu_${item.id}`}
-          className={`w-full flex items-center gap-4 text-[15px] ${activeMenu === item.label ? "text-[#05210b] bg-[#5FD370] shadow-[0_10px_20px_-16px_rgba(95,211,112,0.75)]" : "text-[#355a2f]"} py-3 px-4 rounded-xl hover:bg-[#eaf4e7] transition-all duration-200 mb-1`}
+          className={`w-full flex items-center gap-4 text-[15px] ${activeMenu === item.label ? "text-white bg-primary-gradient shadow-[0_10px_20px_-10px_var(--accent-electric)]" : "text-secondary-text hover:text-primary-text"} py-3 px-4 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-all duration-200 mb-1`}
           onClick={() => handleClick(item.path)}
         >
           <item.icon className="text-xl" />
