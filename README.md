@@ -4,8 +4,7 @@
 Premium Expense Tracker is a state-of-the-art, modern financial management dashboard designed to help users effortlessly track their income and expenses. It features a stunning split-screen aesthetic, fully dynamic dark and light modes, and beautiful data visualizations. Built with an uncompromising focus on user experience and visual excellence, the application makes personal finance engaging and intuitive.
 
 ## 🚀 Live Demo
-*[Insert Live Demo Link Here]*  
-*(Deploy the frontend to Vercel/Netlify and the backend to Render, then add the link above!)*
+[**View the Live Portfolio Here**](https://expense-tracker-sigma-two-95.vercel.app/login) 
 
 ## 🛠️ Tech Stack
 
