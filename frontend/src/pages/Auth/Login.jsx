@@ -157,7 +157,7 @@ const Login = () => {
                   onChange={handleChange}
                   placeholder="you@example.com"
                   required
-                  className={`w-full rounded-2xl border pl-12 pr-4 py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
+                  className={`w-full rounded-2xl border !pl-12 !pr-4 !py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
                     "ui-input"
                   }`}
                 />
@@ -209,7 +209,7 @@ const Login = () => {
                   onChange={handleChange}
                   placeholder="Enter your password"
                   required
-                  className={`w-full rounded-2xl border pl-12 pr-14 py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
+                  className={`w-full rounded-2xl border !pl-12 !pr-14 !py-4 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-4 ${
                     "ui-input"
                   }`}
                 />

@@ -223,7 +223,7 @@ const SignUp = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className={`w-full pl-12 pr-4 py-4 rounded-2xl border text-sm font-medium outline-none transition-all duration-300 ${
+                  className={`w-full !pl-12 !pr-4 !py-4 rounded-2xl border text-sm font-medium outline-none transition-all duration-300 ${
                     isDark ? "bg-dark-panel border-dark-border text-dark-text-primary placeholder:text-[#C6DEC680] focus:border-accent-electric focus:ring-4 focus:ring-accent-electric/20" : "bg-light-bg-main border-light-border text-light-text-primary placeholder:text-[#113E0280] focus:border-accent-electric focus:ring-4 focus:ring-accent-electric-light/20"
                   }`}
                   required
@@ -266,7 +266,7 @@ const SignUp = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className={`w-full pl-12 pr-4 py-4 rounded-2xl border text-sm font-medium outline-none transition-all duration-300 ${
+                  className={`w-full !pl-12 !pr-4 !py-4 rounded-2xl border text-sm font-medium outline-none transition-all duration-300 ${
                     isDark ? "bg-dark-panel border-dark-border text-dark-text-primary placeholder:text-[#C6DEC680] focus:border-accent-electric focus:ring-4 focus:ring-accent-electric/20" : "bg-light-bg-main border-light-border text-light-text-primary placeholder:text-[#113E0280] focus:border-accent-electric focus:ring-4 focus:ring-accent-electric-light/20"
                   }`}
                   required
@@ -309,7 +309,7 @@ const SignUp = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Create strong password"
-                  className={`w-full pl-12 pr-14 py-4 rounded-2xl border text-sm font-medium outline-none transition-all duration-300 ${
+                  className={`w-full !pl-12 !pr-14 !py-4 rounded-2xl border text-sm font-medium outline-none transition-all duration-300 ${
                     isDark ? "bg-dark-panel border-dark-border text-dark-text-primary placeholder:text-[#C6DEC680] focus:border-accent-electric focus:ring-4 focus:ring-accent-electric/20" : "bg-light-bg-main border-light-border text-light-text-primary placeholder:text-[#113E0280] focus:border-accent-electric focus:ring-4 focus:ring-accent-electric-light/20"
                   }`}
                   required
